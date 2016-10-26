@@ -1,0 +1,36 @@
+Brainstorm:
+
+The system should clear cans
+The system should Find cans
+The system should detect the landing zone
+Should stay within the landing zone.
+The system should notify martians
+the System should evacuate 
+system should keep track of cans moved
+should keep track of distance cans are moved
+System should be calibrated 
+
+---------------------------------------
+Lower:
+Find(){
+DetectCloseCan()
+moveTowardCan()
+ExtractCan()
+}
+ClearCans(){
+Notify()
+Find()
+
+}
+CheckForEdge(){
+
+}
+
+
+
+1 cubic foot
+Constraint
+Finish within 30 seconds
+move 3 cans
+exit the area
+3 tones (foward)(backward)(Pushing)
