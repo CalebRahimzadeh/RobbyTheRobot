@@ -11,6 +11,8 @@ After extraction the system should move back into the landing zone
 The system should push cans out of landing zone.
 should keep track of distance cans are moved
 System should be calibrated 
+The system should display the distance pushed.
+The system should display the length of time to remove.
 
 ---------------------------------------
 Lower:
