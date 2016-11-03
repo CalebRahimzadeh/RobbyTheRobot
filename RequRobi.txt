@@ -41,10 +41,7 @@ MoveToward:
 ...	Accurately[pref]
 ...	Quickly[pref]
 The system should notify martians with three tones...
-	variety of beep patterns[rapid, short, steady]
-	rapidly[ 3 beep bursts](Reverse)
-	slowly[ 1 beep bursts](Forward)
-	steadily[2 beep bursts](Pushing)
+	variety of beep tones[high, medium, low]
 The system should calibrate[pref]????  
 
 The System should evacuate the landing zone...
