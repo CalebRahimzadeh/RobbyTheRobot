@@ -1,0 +1,6 @@
+package enums;
+
+public enum State {
+	INIT, FIND, RESET, PUSHOUTOFAREA, MOVETOCAN, MOVEBACKTOLINE, PUSH, EVACUATE
+
+}
