@@ -7,10 +7,12 @@ Should stay within the landing zone.
 The system should notify martians with three tones
 the System should evacuate 
 system should keep track of cans moved
-After extraction the system should move back into the landing zone
+After each extraction the system should move back into the landing zone
 The system should push cans out of landing zone.
 should keep track of distance cans are moved
 System should be calibrated 
+The system should display the distance pushed.
+The system should display the length of time to remove.
 
 ---------------------------------------
 Lower:
@@ -31,25 +33,22 @@ CheckForEdge(){
 
 
 Attribute and constraints
-FindCans:
-...	Accurately[3 cans]
-ClearCans:
-...	quickly[ <= 30 seconds]
+The system should Find cans...
+	Accurately[3 cans]
+The system should Clear cans...
+	quickly[ <= 30 seconds]
 MoveToward:
 ...	Accurately[pref]
 ...	Quickly[pref]
-Notify:
-...	variety of beep patterns[rapid, short, steady]
-...	rapidly[ 3 beep bursts](Reverse)
-...	slowly[ 1 beep bursts](Forward)
-...	steadily[2 beep bursts](Pushing)
-Calibration: [pref]????
-...     
-Evacuate:
-...	Quickly[ <= 30 seconds]
-Detect Landing Zone:
-... 	Light Values[black or light]
-...	Accurately[pref]
+The system should notify martians with three tones...
+	variety of beep tones[high, medium, low]
+The system should calibrate[pref]????  
+
+The System should evacuate the landing zone...
+	Quickly[ <= 30 seconds]
+The system should detect the landing zone...
+ 	Light Values[black or light]
+	Accurately[pref]
 Constraint
 1 cubic foot
 Finish within 30 seconds
