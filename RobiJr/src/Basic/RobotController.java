@@ -89,15 +89,7 @@ public class RobotController implements ButtonEventListener, SonarEventListener,
 				break;
 			}
 		}
-		//if state is push
-		// stop
-		// drive forward slightly
-		// switch state to reset
-		// add 1 to can counter
-		// if state is reset move robot to middle
-		//switch state to Find
-		//if can counter is 3
-		//set state to evacuate
+	
 	}
 
 	@Override

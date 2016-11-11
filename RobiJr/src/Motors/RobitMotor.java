@@ -16,7 +16,7 @@ public class RobitMotor {
 	    public RobitMotor(){
 	        pilot = new DifferentialPilot(WHEEL_DIAM, TRACK_WIDTH, Motor.A, Motor.B);
 	        pilot.setTravelSpeed(TRAVEL_SPEED);
-	    }
+	    }	
 	    public void driveFoward(){
 	        synchronized(this){
 	            new Thread(new Runnable(){

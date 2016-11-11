@@ -1,21 +1,21 @@
 package UI;
 
-import Utillity.Counter;
+
 
 public class Screen {
 
 
 	
-	public void displayHowLongCanPush(Counter counter){
-		System.out.println(counter.getTimeCounter());
+	public void displayHowLongCanPush(int counter){
+		System.out.println("Time to push can: " + counter);
 	}
 	
-	public void displayHowManyCansMoved(Counter counter){
-		System.out.println(counter.getCanCounter());
+	public void displayHowManyCansMoved(int counter){
+		System.out.println("Cans moved: " + counter);
 	}
 	
-	public void  displayHowFarCanPushed(Counter counter){
-		System.out.println(counter.getCanPushedCounter());
+	public void  displayHowFarCanPushed(int counter){
+		System.out.println("Distance cans Pushed: " + counter);
 	}
 	
 }

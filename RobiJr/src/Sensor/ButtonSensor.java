@@ -17,8 +17,7 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 	public ButtonSensor() {
 		sensor = new TouchSensor(SensorPort.S1);
 		isRunning = true;
-		//create list of listeners
-		//start thread
+		listeners = new ArrayList();
 	}
 	
 	public void subscribe(ButtonEventListener listener) {
@@ -37,12 +36,10 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 	
 	@Override
 	public void notifyListeners() {
-		// for each suscribed listener fire events
 		for (ButtonEventListener buttonEventListener : listeners) {
 			buttonEventListener.onButtonPress();
 		}
 	}
-	
 	
 	public void start(){
 		new Thread(){
@@ -60,10 +57,8 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 					}	
 				}
 				else{
-					justPressed = false;
-					
+					justPressed = false;	
 				}
-				
 			}
 				
 			}
@@ -78,6 +73,4 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 	public void stop(){
 		isRunning = false;
 	}
-
-
 }

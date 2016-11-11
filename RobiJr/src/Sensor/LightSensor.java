@@ -4,14 +4,18 @@ import java.util.ArrayList;
 import java.util.EventListener;
 import java.util.List;
 
+import Interfaces.EventInterface;
 import Listeners.LightEventListener;
+import lejos.nxt.SensorPort;
 
-public class LightSensor implements EventListener, Runnable{
+public class LightSensor implements EventInterface<LightEventListener>, Runnable{
 	
 	private List<LightEventListener> listeners;
 	private boolean isRunning;
+	private lejos.nxt.LightSensor sensor;
 	
 	public LightSensor() {
+		sensor = new lejos.nxt.LightSensor(SensorPort.S3);
 		isRunning = true;
 		//start thread
 		this.listeners = new ArrayList<>();
@@ -28,19 +32,45 @@ public class LightSensor implements EventListener, Runnable{
 			listeners.remove(listener);
 		}
 	}
+	@Override
+	public void notifyListeners() {
+		for(LightEventListener lightListeners: listeners){
+			lightListeners.onFindLineEvent();
+		}
+		
+	}
 	
 	public void start(){
-		
+		new Thread(){
+			@Override
+			public void run() {
+				boolean foundLine = false;
+				while(isRunning){
+					if(sensor.getLightValue() < 15){
+						if(!foundLine){
+							notifyListeners();
+							foundLine = true;
+						}
+					}
+					else{
+						foundLine = true;
+					}
+				}
+			}
+			
+		}.start();
 	}
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		start();
 		
 	}
 	public void stop(){
 		isRunning = false;
 	}
+
+	
 
 
 }
