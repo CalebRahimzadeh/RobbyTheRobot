@@ -16,6 +16,7 @@ public class LightSensor implements EventInterface<LightEventListener>, Runnable
 	
 	public LightSensor() {
 		sensor = new lejos.nxt.LightSensor(SensorPort.S3);
+		sensor.setFloodlight(true);
 		isRunning = true;
 		//start thread
 		this.listeners = new ArrayList<>();
@@ -46,8 +47,9 @@ public class LightSensor implements EventInterface<LightEventListener>, Runnable
 			public void run() {
 				boolean foundLine = false;
 				while(isRunning){
-					if(sensor.getLightValue() < 15){
-						if(!foundLine){
+					//System.out.println("Light Value: "+ sensor.getLightValue());
+					if(sensor.getLightValue() <= 25 && sensor.getLightValue() >= 1){
+						if(foundLine){
 							notifyListeners();
 							foundLine = true;
 						}

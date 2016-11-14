@@ -11,13 +11,13 @@ public class Tone {
 	}
 	
 	public void shoutFowardTone(int duration){
-		Sound.playTone(4, duration);
+		Sound.playTone(287, duration);
 	}
 	public void shoutBackwardTone(int duration){
-		Sound.playTone(2, duration);
+		Sound.playTone(400, duration);
 	}
 	public void shoutPushingTone(int duration){
-		Sound.playTone(1, duration);
+		Sound.playTone(100, duration);
 	}
 
 }

@@ -12,10 +12,12 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 
 	private List<ButtonEventListener> listeners;
 	private TouchSensor sensor;
+	private TouchSensor sensor1;
 	private boolean isRunning;
 	
 	public ButtonSensor() {
 		sensor = new TouchSensor(SensorPort.S1);
+		sensor1 = new TouchSensor(SensorPort.S4);
 		isRunning = true;
 		listeners = new ArrayList();
 	}
@@ -48,7 +50,7 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 			boolean justPressed = false;
 				
 			while(isRunning){
-				if(sensor.isPressed() ){
+				if(sensor.isPressed() || sensor1.isPressed() ){
 					
 					if(!justPressed){
 						

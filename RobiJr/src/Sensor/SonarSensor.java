@@ -24,6 +24,7 @@ public class SonarSensor implements EventInterface<SonarEventListener>, Runnable
 	public void subscribe(SonarEventListener listener) {
 		if(!listeners.contains(listener)){
 			listeners.add(listener);
+		
 		}
 	}
 
@@ -48,7 +49,8 @@ public class SonarSensor implements EventInterface<SonarEventListener>, Runnable
 			public void run() {
 				boolean foundObject = false;
 				while(isRunning){
-					if(sensor.capture() > 24){
+					//System.out.println("Sonar Value:"  + sensor.getDistance());
+					if(sensor.getDistance() <= 60 && sensor.getDistance() >= 20){
 						if(!foundObject){
 						notifyListeners();
 						foundObject = true;
