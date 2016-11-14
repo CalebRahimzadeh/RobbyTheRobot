@@ -9,41 +9,10 @@ public class RobitMotorTest {
 	
 	@Test
 	public void testRobitMotor() {
-		RobitMotor motor = new RobitMotor();
-		if(motor != null)
-			assertTrue("Motor constructed",true);
-		else
-			fail("Motor not constructed");
-	}
-
-	@Test
-	public void testDriveFoward() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGoFast() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGoSlow() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSeek() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testTurnAround() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testStop() {
-		fail("Not yet implemented");
+		RobitMotor motor = null;
+		assertNull(motor);
+		motor = new RobitMotor();
+		assertNotNull(motor);
 	}
 
 	@Test

@@ -8,7 +8,10 @@ public class ButtonSensorTest {
 
 	@Test
 	public void testButtonSensor() {
-		fail("Not yet implemented");
+		ButtonSensor btnSensor = null;
+		assertNull(btnSensor);
+		btnSensor = new ButtonSensor();
+		assertNotNull(btnSensor);
 	}
 
 	@Test

@@ -7,8 +7,10 @@ public class ScreenTest {
 	@Test
 	public void testDisplayHowLongCanPush() {
 		Screen screen = new Screen();
-		String result = screen.howLongCanPushMsg(5);
-		assertEquals("Time to push can: 5", result);
+		String result = screen.howLongCanPushMsg(555);
+		assertEquals("Time to push can: 555", result);
+		result = screen.howLongCanPushMsg(01);
+		assertEquals("Time to push can: 01", result);
 	}
 
 	@Test
