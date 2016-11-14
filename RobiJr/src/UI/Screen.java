@@ -3,8 +3,6 @@ package UI;
 
 
 public class Screen {
-
-
 	
 	public void displayHowLongCanPush(int counter){
 		System.out.println("Time to push can: " + counter);

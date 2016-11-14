@@ -67,10 +67,9 @@ public class ButtonSensor implements EventInterface<ButtonEventListener>, Runnab
 
 	@Override
 	public void run() {
-		start();
-		
+		this.start();
 	}
 	public void stop(){
-		isRunning = false;
+		this.isRunning = false;
 	}
 }

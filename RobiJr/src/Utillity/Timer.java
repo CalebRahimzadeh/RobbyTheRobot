@@ -10,7 +10,8 @@ import Listeners.TimerListener;
 public class Timer implements EventInterface<TimerListener> {
 	private List<TimerListener> Listeners;
 	private final long TIME;
-	public Timer( float timeInSeconds){
+	
+	public Timer(float timeInSeconds){
 		Listeners = new ArrayList<>();
 		this.TIME = (long) (timeInSeconds * 1000);
 	}
