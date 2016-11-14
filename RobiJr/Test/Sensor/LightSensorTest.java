@@ -13,5 +13,4 @@ public class LightSensorTest {
 		lightSensor = new LightSensor();
 		assertNotNull(lightSensor);
 	}
-
 }

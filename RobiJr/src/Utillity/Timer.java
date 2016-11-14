@@ -52,5 +52,5 @@ public class Timer implements EventInterface<TimerListener> {
 			}
 		}.start();
 	}
-
+	
 }

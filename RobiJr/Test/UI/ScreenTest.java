@@ -2,15 +2,25 @@ package UI;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import Sensor.ButtonSensor;
+
 public class ScreenTest {
 
+	@Test
+	public void testScreen() {
+		Screen screen = null;
+		assertNull(screen);
+		screen = new Screen();
+		assertNotNull(screen);
+	}
 	@Test
 	public void testDisplayHowLongCanPush() {
 		Screen screen = new Screen();
 		String result = screen.howLongCanPushMsg(555);
 		assertEquals("Time to push can: 555", result);
 		result = screen.howLongCanPushMsg(01);
-		assertEquals("Time to push can: 01", result);
+		System.out.println(result);
+		assertEquals("Time to push can: 1", result);
 	}
 
 	@Test

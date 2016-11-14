@@ -14,34 +14,34 @@ public class ButtonSensorTest {
 		assertNotNull(btnSensor);
 	}
 
-	@Test
-	public void testSubscribe() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUnsubscribe() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testNotifyListeners() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testStart() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testRun() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testStop() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testSubscribe() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testUnsubscribe() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testNotifyListeners() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testStart() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testRun() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testStop() {
+//		fail("Not yet implemented");
+//	}
 
 }

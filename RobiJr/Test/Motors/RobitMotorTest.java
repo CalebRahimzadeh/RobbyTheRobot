@@ -31,9 +31,4 @@ public class RobitMotorTest {
 		
 	}
 
-	@Test
-	public void testReverse() {
-		fail("Not yet implemented");
-	}
-
 }
