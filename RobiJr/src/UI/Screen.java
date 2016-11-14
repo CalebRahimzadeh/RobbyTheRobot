@@ -4,16 +4,22 @@ package UI;
 
 public class Screen {
 	
-	public void displayHowLongCanPush(int counter){
-		System.out.println("Time to push can: " + counter);
+	public void displayCanRemovalInfo(int counter) {
+		System.out.println(this.howLongCanPushMsg(counter));
+		System.out.println(this.howManyCansMovedMsg(counter));
+		System.out.println(this.howFarCanPushedMsg(counter));
 	}
 	
-	public void displayHowManyCansMoved(int counter){
-		System.out.println("Cans moved: " + counter);
+	public String howLongCanPushMsg(int counter){
+		return "Time to push can: " + counter;
 	}
 	
-	public void  displayHowFarCanPushed(int counter){
-		System.out.println("Distance cans Pushed: " + counter);
+	public String howManyCansMovedMsg(int counter){
+		return "Cans moved: " + counter;
+	}
+	
+	public String howFarCanPushedMsg(int counter){
+		return "Distance cans Pushed: " + counter;
 	}
 	
 }

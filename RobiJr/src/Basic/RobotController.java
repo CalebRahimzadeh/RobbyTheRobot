@@ -43,15 +43,11 @@ public class RobotController implements ButtonEventListener, SonarEventListener,
 		currentState = State.FIND;
 		robitMotor.seek();
 		
-	
-
 	}
 	@Override
 	public void onFindLineEvent() {
 		Timer timer = null;
 		synchronized (this) {
-
-
 			switch(currentState){
 
 			case EVACUATE:
@@ -95,8 +91,7 @@ public class RobotController implements ButtonEventListener, SonarEventListener,
 	@Override
 	public void onButtonPress() {
 		synchronized (buttonSensor) {
-
-
+			
 			switch(currentState){
 			case EVACUATE:
 				break;
