@@ -55,7 +55,6 @@ public class RobotController implements ButtonEventListener, SonarEventListener,
 			case FIND:
 				
 				break;
-			
 			case INIT:
 				break;
 			case MOVETOCAN:

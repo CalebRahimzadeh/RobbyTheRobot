@@ -3,9 +3,7 @@ package UI;
 import lejos.nxt.Sound;
 
 public class Tone {
-	
-	
-	
+		
 	public Tone(){
 		
 	}
